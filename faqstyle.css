@@ -1,0 +1,82 @@
+.faq .row {
+    padding: 20px 20px;
+    border-bottom: 3px solid #e83cc4;
+    cursor: pointer;
+    background: #500a9e url(images/banner-bg.jpg) no-repeat top center fixed;
+    background-size: cover;
+    margin: 0px 0px 10px 0px;
+    border-radius: 0px 0px 0px 0px;
+    transition: 0.7s;
+}
+.faq-Q {
+  margin: 0;
+  color: #fff;
+  position: relative;
+  font-size: 18px;
+}
+.faq-Q:before {
+    position: absolute;
+    top: 0px;
+    width: 10px;
+    height: 0px;
+    content: '+';
+    transition:0.7s;
+    right: 15px;
+    font-size: 30px;
+}
+.faq-Q:after {
+    position: absolute;
+    top: 0px;
+    width: 10px;
+    height: 0px;
+    content: '+';
+    transition:0.7s;
+    right: 15px;
+    font-size: 30px;
+}
+.faq-D {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.faqOpen {
+    background:#ff5e1db8;
+    border-radius: 9px;
+}
+.faqOpen .row {
+    border: 0;
+    padding: 20px 20px;
+    transition: 0.7s;
+    border-bottom: 3px solid #05db56;
+}
+.faqOpen .faq-D {
+  margin-top: 15px;
+  height: inherit;
+  opacity: 1;
+  color:#fff;
+  
+}
+.faqOpen .faq-Q:before {
+	position: absolute;
+    top: 0px;
+    width: 10px;
+    height: 0px;
+    content: '_';
+    transition:0.7s;
+    right: 15px;
+    font-size: 30px;
+}
+.faqOpen .faq-Q:after {
+	position: absolute;
+    top: 0px;
+    width: 10px;
+    height: 0px;
+    content: '_';
+    transition:0.7s;
+    right: 15px;
+    font-size: 30px;
+}
+.press {
+  margin: 50px 0 20px;
+}

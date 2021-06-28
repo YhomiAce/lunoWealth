@@ -1,0 +1,209 @@
+
+/**************SKY***************/
+.sky {
+  height: 450px;
+  overflow: hidden;
+  background: darkslateblue;
+    box-shadow: 0 -400px 300px -300px orangered inset;
+animation: sky 60s infinite linear;
+}
+
+@keyframes sky {
+  0% {
+    background: darkslateblue;
+    -webkit-filter: brightness(100%);
+  }
+  10% {
+    background: skyblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+    -webkit-filter: brightness(125%);
+  }
+  50% {
+    background: skyblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+    -webkit-filter: brightness(220%);
+  }
+  93% {
+   background: skyblue;
+   -webkit-filter: brightness(125%);
+  }
+  100% {
+    background: darkslateblue;
+    box-shadow: 0 -400px 300px -300px orangered inset
+    -webkit-filter: brightness(100%);
+  }
+}
+/*************GROUND************/
+.ground {
+  /*background: url(https://res.cloudinary.com/dgoibfloj/image/upload/v1475447869/ft-bg-fff-2_imno9k.png) repeat-x scroll left top;*/
+  position: absolute;
+  /*overflow: hidden;*/
+  top: 40%;
+  width: 100%;
+  height: 60%;
+  -webkit-filter: brightness(.3);
+   animation: brgh 60s infinite linear;
+}
+
+.ground::after {
+  content: "";
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  bottom: 63px;
+  /*background-color: #4e7f3a;*/
+  z-index: -1;
+}
+
+@keyframes brgh{
+  0% {
+    -webkit-filter: brightness(.3);
+  }
+  10% {
+    -webkit-filter: brightness(.9);
+  }
+  50% {
+    -webkit-filter: brightness(1.15);
+  }
+  85% {
+   -webkit-filter: brightness(.9);
+   }
+  100% {
+   -webkit-filter: brightness(.3);
+  }
+}
+/***********WINDMILL**********/
+.windmill1 {
+    float: left;
+    /*margin-top: 30px;*/
+    margin-left: 34%;
+    width: 189px;
+    height: 200px;
+    perspective: 100px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d; 
+}
+
+.base1 {
+    position: absolute;
+    top: -20px;
+    left: 59px;
+}
+
+.blades1 {
+	
+    max-width: 400px;
+    position: relative;
+    animation-name: rotate-blades;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin: -200px 0px 0px -121px;
+}
+
+.windmill2 {
+    float: right;
+    margin-top: -90px;
+    margin-right: 11%;
+    width: 189px;
+    height: 200px;
+    perspective: 100px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+.base2 {
+    position: absolute;
+    top: 6px;
+    left: 59px;
+    max-width: 20px;
+}
+
+.blades2 {
+	
+	max-width: 272px;
+    position: relative;
+    animation-name: rotate-blades;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin: -120px 0px 0px -67px;
+}
+
+@keyframes rotate-blades {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.shadow {
+  -webkit-filter: brightness(.3) opacity(1);
+  position: absolute;
+  width: 134px;
+  height: 170px;
+  z-index: -1;
+  transform-origin: 50% 100%;
+  animation-name: rotate-shadow;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.shadow2{
+	
+	-webkit-filter: brightness(.3) opacity(1);
+    position: absolute;
+    width: 134px;
+    height: 170px;
+    z-index: -1;
+    transform-origin: 50% 100%;
+    animation-name: rotate-shadow;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin: -64px 0px 0px 4px;
+}
+
+.base-shadow {
+  position: absolute;
+  top: 65px;
+  left: 59px;
+  z-index: -6;
+}
+
+.blades-shadow {
+  position: absolute;
+  z-index: -6;
+  animation-name: rotate-blades;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate-shadow {
+  from {
+    -webkit-transform: scale3d(3, 0.27, 1) rotateZ(-120deg);
+/*     animation-timing-function: cubic-bezier(.05, .55, .51, .52) */
+    animation-timing-function: linear;
+  }
+  3% {
+    -webkit-transform: scale3d(2.7, 0.18, 1) rotateZ(-90deg);
+    animation-timing-function: cubic-bezier(0.15, .55, .51, .52)
+  }
+  50% {
+    -webkit-transform: scale3d(1, 0.3, 1) rotateZ(0deg);
+    animation-timing-function: cubic-bezier(.52, .51, .85, .55);
+  }
+  97% {
+    -webkit-transform: scale3d(2.7, 0.18, 1) rotateZ(90deg);
+    animation-timing-function: linear;
+  }
+  to {
+    /*     -webkit-transform: scale3d(1.65, 0.3, 1) rotateZ(90deg); */
+    -webkit-transform: scale3d(3, 0.27, 1) rotateZ(120deg);
+  }
+}
